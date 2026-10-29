@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nossas Fotos ❤️</title>  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 25px 15px;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: #a52d65;
+      background: linear-gradient(135deg, #ffe0ed, #fff7fb, #ffc5dc);
+    }
+
+    h1 { color: #d63384; }
+
+    .introducao {
+      max-width: 600px;
+      margin: 0 auto 25px;
+      line-height: 1.7;
+    }
+
+    .album {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .foto {
+      background: white;
+      padding: 12px;
+      border-radius: 18px;
+      box-shadow: 0 5px 18px #d879a633;
+    }
+
+    .espaco {
+      height: 200px;
+      border: 2px dashed #e88db5;
+      border-radius: 12px;
+      background: #fff0f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      color: #c64f87;
+    }
+
+    .espaco span { font-size: 45px; }
+
+    .foto img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .foto p {
+      font-family: Georgia, serif;
+      line-height: 1.5;
+    }
+
+    .botao, .voltar {
+      display: inline-block;
+      margin: 20px 5px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 25px;
+      background: #e86a9e;
+      color: white;
+      font-size: 15px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .botao:hover, .voltar:hover { background: #c93678; }
+
+    input[type="file"] { display: none; }
+  </style></head><body>
+  <h1>📸 Nossas Memórias ❤️</h1>  <p class="introducao">
+    Cada foto guarda um pedacinho da nossa história.
+    Quero encher este álbum de momentos lindos com você, minha Megan! 💗
+  </p>  <div class="album">
+    <div class="foto">
+      <div class="espaco" id="espaco1">
+        <span>💕</span>
+        <strong>Nossa primeira lembrança</strong>
+      </div>
+      <img id="imagem1" alt="Nossa primeira lembrança" hidden>
+      <p>O começo de tantas coisas lindas. ❤️</p>
+      <label class="botao" for="arquivo1">Escolher foto</label>
+      <input type="file" id="arquivo1" accept="image/*">
+    </div><div class="foto">
+  <div class="espaco" id="espaco2">
+    <span>🥰</span>
+    <strong>Um momento especial</strong>
+  </div>
+  <img id="imagem2" alt="Um momento especial" hidden>
+  <p>Com você, até os pequenos momentos são especiais. 💗</p>
+  <label class="botao" for="arquivo2">Escolher foto</label>
+  <input type="file" id="arquivo2" accept="image/*">
+</div>
+
+<div class="foto">
+  <div class="espaco" id="espaco3">
+    <span>🌷</span>
+    <strong>Uma lembrança nossa</strong>
+  </div>
+  <img id="imagem3" alt="Uma lembrança nossa" hidden>
+  <p>Quero guardar muitos outros momentos ao seu lado. 💞</p>
+  <label class="botao" for="arquivo3">Escolher foto</label>
+  <input type="file" id="arquivo3" accept="image/*">
+</div>
+
+<div class="foto">
+  <div class="espaco" id="espaco4">
+    <span>💘</span>
+    <strong>Nossa próxima memória</strong>
+  </div>
+  <img id="imagem4" alt="Nossa próxima memória" hidden>
+  <p>Ainda temos tantas histórias para viver! ✨</p>
+  <label class="botao" for="arquivo4">Escolher foto</label>
+  <input type="file" id="arquivo4" accept="image/*">
+</div>
+
+  </div><a class="voltar" href="index.html">❤️ Voltar ao início</a>
+
+  <script>
+    for (let i = 1; i <= 4; i++) {
+      const arquivo = document.getElementById("arquivo" + i);
+
+      arquivo.addEventListener("change", function() {
+        const foto = this.files[0];
+        if (!foto) return;
+
+        const imagem = document.getElementById("imagem" + i);
+        imagem.src = URL.createObjectURL(foto);
+        imagem.hidden = false;
+        document.getElementById("espaco" + i).style.display = "none";
+      });
+    }
+  </script></body>
+</html>

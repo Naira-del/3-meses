@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nossos Sonhos 💗</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 25px 15px;
+  font-family: Georgia, serif;
+  text-align: center;
+  color: #85415f;
+  background: linear-gradient(135deg, #ffc5dc, #fff7fb, #ffe0ed);
+}
+
+.pagina {
+  max-width: 650px;
+  margin: 20px auto;
+  padding: 30px 22px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 8px 30px #d879a644;
+}
+
+h1, h2 { color: #d63384; }
+
+.coracao {
+  font-size: 65px;
+  animation: bater 1s infinite alternate;
+}
+
+@keyframes bater {
+  to { transform: scale(1.15); }
+}
+
+.sonho {
+  margin: 18px 0;
+  padding: 18px;
+  border-radius: 18px;
+  background: #fff0f6;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.sonho span {
+  font-size: 27px;
+  margin-right: 8px;
+}
+
+button, .botao {
+  display: inline-block;
+  border: none;
+  background: #e86a9e;
+  color: white;
+  padding: 13px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+button:hover, .botao:hover { background: #c93678; }
+
+#surpresa {
+  display: none;
+  margin-top: 22px;
+  padding: 20px;
+  background: #ffe0ed;
+  border-radius: 18px;
+  line-height: 1.8;
+}
+
+</style>
+</head>
+
+<body>
+<main class="pagina">
+
+  <div class="coracao">💗</div>
+
+  <h1>Nossos Sonhos</h1>
+  <p><strong>Naira ❤️ Megan</strong></p>
+
+  <p>
+    Meu amor, ainda temos tantas coisas lindas para viver.
+    Quero construir uma história cheia de carinho com você.
+  </p>
+
+  <div class="sonho">
+    <span>🤗</span>
+    <strong>Nosso primeiro abraço</strong>
+    <p>Finalmente poder ficar pertinho, te abraçar bem forte e não querer soltar tão cedo.</p>
+  </div>
+
+  <div class="sonho">
+    <span>🌅</span>
+    <strong>Ver o pôr do sol juntas</strong>
+    <p>Passar um momento tranquilo ao seu lado, conversando sobre tudo e sobre nada.</p>
+  </div>
+
+  <div class="sonho">
+    <span>🏡</span>
+    <strong>Construir nossos planos</strong>
+    <p>Sonhar com o futuro, apoiar uma à outra e criar lembranças que sejam só nossas.</p>
+  </div>
+
+  <div class="sonho">
+    <span>📸</span>
+    <strong>Guardar nossas lembranças</strong>
+    <p>Tirar muitas fotos, rir das nossas bobeiras e recordar cada momento especial.</p>
+  </div>
+
+  <div class="sonho">
+    <span>💍</span>
+    <strong>Celebrar nosso amor</strong>
+    <p>Continuar escolhendo o carinho, o respeito e a parceria em cada nova fase da vida.</p>
+  </div>
+
+  <button onclick="mostrarSurpresa()">Tenho mais um sonho 💌</button>
+
+  <div id="surpresa">
+    <h2>Meu maior sonho é você! 💖</h2>
+    <p>
+      Não preciso saber todos os detalhes do futuro.
+      Só quero que, enquanto caminharmos juntas,
+      existam amor, respeito, cumplicidade e vontade
+      de fazer dar certo.
+    </p>
+    <p>Com amor, Naira. ❤️</p>
+  </div>
+
+  <p>
+    <a class="botao" href="index.html">❤️ Voltar ao início</a>
+  </p>
+
+</main>
+
+<script>
+function mostrarSurpresa() {
+  document.getElementById("surpresa").style.display = "block";
+}
+</script>
+
+</body>
+</html>

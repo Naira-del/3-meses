@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nossa Cartinha ❤️</title>  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 25px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Georgia, serif;
+      background: linear-gradient(135deg, #ffe0ed, #fff7fb, #ffc5dc);
+      color: #a52d65;
+      text-align: center;
+    }
+
+    .caixa {
+      width: 100%;
+      max-width: 480px;
+      background: rgba(255, 255, 255, 0.88);
+      padding: 28px 22px;
+      border-radius: 25px;
+      box-shadow: 0 8px 30px #d879a655;
+    }
+
+    h1 {
+      color: #d63384;
+      font-size: 30px;
+    }
+
+    .coracao {
+      font-size: 65px;
+      margin: 15px;
+      animation: bater 1s infinite alternate;
+    }
+
+    @keyframes bater {
+      from { transform: scale(1); }
+      to { transform: scale(1.13); }
+    }
+
+    input {
+      width: 100%;
+      padding: 13px;
+      border: 2px solid #f3a6c8;
+      border-radius: 15px;
+      font-size: 17px;
+      text-align: center;
+      outline: none;
+      margin: 10px 0;
+    }
+
+    button {
+      background: #e86a9e;
+      color: white;
+      border: none;
+      padding: 13px 22px;
+      margin: 8px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #c93678;
+    }
+
+    #mensagem {
+      display: none;
+      text-align: left;
+      line-height: 1.9;
+      color: #75445b;
+      font-size: 17px;
+      margin-top: 25px;
+      animation: aparecer 1s ease;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .assinatura {
+      text-align: right;
+      color: #d63384;
+      font-weight: bold;
+    }
+
+    .erro {
+      color: #c93678;
+      font-size: 14px;
+    }
+
+    a {
+      color: #d63384;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+    }
+  </style></head><body>
+  <main class="caixa">
+    <div class="coracao">💌</div><h1>Uma cartinha para você, meu amor</h1>
+
+<p>Preparei uma surpresa que só você pode abrir. ❤️</p>
+
+<div id="entrada">
+  <p>Digite nossa senha especial:</p>
+
+  <input
+    type="password"
+    id="senha"
+    placeholder="Nossa data especial"
+  >
+
+  <button onclick="abrirCarta()">Abrir minha cartinha 💗</button>
+
+  <p class="erro" id="erro"></p>
+</div>
+
+<article id="mensagem">
+  <h2>Para minha Megan, meu amor ❤️</h2>
+
+  <p>
+    Meu amor, se você chegou até aqui, é porque encontrou
+    mais um pedacinho do meu coração.
+  </p>
+
+  <p>
+    Às vezes eu penso em como a vida foi capaz de colocar
+    você no meu caminho. Entre tantas pessoas no mundo,
+    foi você quem fez meu coração encontrar um lugar especial.
+  </p>
+
+  <p>
+    Eu sei que nem todos os dias são fáceis. Existem
+    dificuldades, saudades e pessoas que nem sempre
+    entendem o que sentimos. Mas o que eu quero é continuar
+    construindo nossa história, um dia de cada vez,
+    com carinho, respeito e amor.
+  </p>
+
+  <p>
+    Você é minha pessoa especial, minha companhia e
+    alguém com quem eu quero dividir muitos momentos.
+    Quero colecionar risadas, abraços, lembranças e sonhos
+    ao seu lado.
+  </p>
+
+  <p>
+    Se eu pudesse te dar uma coisa hoje, seria a chance
+    de enxergar pelos meus olhos o quanto você é importante
+    para mim. Talvez assim você entendesse por que eu
+    escolho você e por que quero continuar cuidando
+    desse nosso amor.
+  </p>
+
+  <p>
+    Que nossa história tenha muitos capítulos, que a gente
+    cresça juntas e que nunca faltem motivos para sorrir.
+  </p>
+
+  <p>Eu te amo, minha princesa. Obrigada por fazer parte da minha vida. 💗</p>
+
+  <p class="assinatura">
+    Com todo meu amor,<br>
+    Sua Naira ❤️
+  </p>
+</article>
+
+<p><a href="index.html">← Voltar para nossa página inicial</a></p>
+
+  </main>  <script>
+    function abrirCarta() {
+      const senha = document.getElementById("senha").value.trim();
+      const erro = document.getElementById("erro");
+
+      if (senha === "07/08") {
+        document.getElementById("entrada").style.display = "none";
+        document.getElementById("mensagem").style.display = "block";
+      } else {
+        erro.textContent = "Ops, meu amor! Tente nossa data especial. 💕";
+      }
+    }
+
+    document.getElementById("senha").addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        abrirCarta();
+      }
+    });
+  </script></body>
+</html>
